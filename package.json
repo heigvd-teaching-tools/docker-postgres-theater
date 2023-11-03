@@ -1,0 +1,17 @@
+{
+  "name": "docker_postgres_theater",
+  "version": "1.0.0",
+  "description": "```bash docker build -t docker_postgres_theater . ```",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@testcontainers/postgresql": "^10.2.1",
+    "pg": "^8.11.2",
+    "testcontainers": "^10.2.1"
+  }
+}
