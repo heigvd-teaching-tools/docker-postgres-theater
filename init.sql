@@ -7,14 +7,14 @@ CREATE TABLE spectacle (
 
 CREATE TABLE jouer (
     nom_acteur TEXT,
-    num_spec INT,
+    num_spec INT REFERENCES spectacle(num_spec),
     PRIMARY KEY(nom_acteur, num_spec)
 );
 
 CREATE TABLE representation (
     date_rep DATE,
     heure_rep TIME,
-    num_spec INT,
+    num_spec INT REFERENCES spectacle(num_spec),
     -- Won't have a tarif more expensive than 999.99
     tarif NUMERIC(5,2),
     PRIMARY KEY(date_rep, heure_rep, num_spec)
